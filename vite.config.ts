@@ -5,7 +5,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      base: mode === 'production' ? '/Examen2_Python/' : '/',
+      // Use the GitHub Pages repo name as base so built assets resolve correctly in production
+      base: mode === 'production' ? '/Examen_Python/' : '/',
       server: {
         port: 3000,
         host: '0.0.0.0',
